@@ -49,7 +49,7 @@ namespace ConsumirPrimeraApi
                     case Menu.EliminarAlumnoAsync:
                         Console.Write("Ingrese el ID del alumno a eliminar: ");
                         int idEliminar = int.Parse(Console.ReadLine());
-                        await acciones.EliminarAlumnoAsync(idEliminar);
+                        await acciones.EliminarAlumnoAsync(idEliminar, acciones.GetClient());
                         break;
                     case Menu.Salir:
                         exit = true;
